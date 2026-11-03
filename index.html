@@ -14,6 +14,22 @@
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/optimized/favicon-32.png" />
     <link rel="apple-touch-icon" href="assets/images/optimized/favicon-180.png" />
+    <!-- Newsreader se sirve desde assets/fonts (ver @font-face) y se precarga
+         porque el titular y la cursiva del hero aparecen sobre el pliegue. -->
+    <link
+      rel="preload"
+      href="assets/fonts/newsreader-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/newsreader-italic-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <!--
@@ -339,9 +355,9 @@
           </div>
         </div>
       </section>
-      <section class="section" id="catalogo" aria-labelledby="catalogo-titulo">
+      <section class="section section--seam" id="catalogo" aria-labelledby="catalogo-titulo">
         <div class="container">
-          <div class="section__head reveal">
+          <div class="section__head section__head--split reveal">
             <p class="eyebrow">Catálogo</p>
             <h2 id="catalogo-titulo">Piezas de referencia</h2>
             <p>
@@ -599,7 +615,7 @@
       </section>
       <section class="section" id="galeria" aria-labelledby="galeria-titulo">
         <div class="container">
-          <div class="section__head reveal">
+          <div class="section__head section__head--center reveal">
             <p class="eyebrow">Galería</p>
             <h2 id="galeria-titulo">Las piezas, de cerca</h2>
             <p>Selecciona una fotografía para verla en grande y apreciar sus detalles.</p>
@@ -830,7 +846,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--dark" id="pedidos" aria-labelledby="pedidos-titulo">
+      <section class="section section--dark section--seam" id="pedidos" aria-labelledby="pedidos-titulo">
         <div class="container order__grid">
           <div class="order__intro reveal">
             <p class="eyebrow">Pedidos personalizados</p>
@@ -1016,7 +1032,7 @@
           </noscript>
         </div>
       </section>
-      <section class="section section--tint" id="contacto" aria-labelledby="contacto-titulo">
+      <section class="section section--dark section--seam" id="contacto" aria-labelledby="contacto-titulo">
         <div class="container contact__grid">
           <div class="reveal">
             <p class="eyebrow">Contacto</p>
