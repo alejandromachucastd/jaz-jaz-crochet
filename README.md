@@ -4,10 +4,22 @@ Sitio estático en español para presentar creaciones de crochet y recibir consu
 
 ## Sitio publicado
 
-- Vista pública (GitHub Pages): https://alejandromachucastd.github.io/jaz-jaz-crochet/
+- Vista pública (Vercel): https://jaz-jaz-crochet.vercel.app/
+- Copia en GitHub Pages: https://alejandromachucastd.github.io/jaz-jaz-crochet/
 - Repositorio: https://github.com/alejandromachucastd/jaz-jaz-crochet
 
-Pages sirve el sitio desde el subdirectorio del repositorio, así que todas las rutas internas son relativas. `canonical`, `og:url`, `og:image`, `twitter:image` y el logo del JSON-LD son absolutos y deben actualizarse si el sitio pasa a un dominio propio.
+Vercel publica desde este directorio con `vercel --prod` y el proyecto se llama `jaz-jaz-crochet`. La integración con Git no está conectada: la cuenta de Vercel no tiene permisos de administración sobre el repositorio, así que cada publicación se sube a mano. Para activarla, instala la GitHub App de Vercel en el repositorio y ejecuta `vercel git connect`.
+
+`.vercelignore` deja fuera `tools/`, `README.md` y `CLAUDE.md`: al despliegue solo viaja el sitio.
+
+`canonical`, `og:url`, `og:image`, `twitter:image` y el logo del JSON-LD son absolutos y apuntan a Vercel. Si el sitio pasa a un dominio propio, actualízalos. Las rutas internas son relativas, así que el sitio funciona igual en la raíz de Vercel y en el subdirectorio de GitHub Pages.
+
+## Tipografía y estilos
+
+- Los titulares usan **Newsreader** autoalojada en `assets/fonts/` (dos archivos woff2 variables, redonda y cursiva, pesos 300–600, precargados). Licencia SIL OFL 1.1 en `assets/fonts/OFL-Newsreader.txt`: si cambias la fuente, conserva su licencia.
+- El texto corrido usa la pila del sistema para no cargar más bytes.
+- La escala tipográfica vive en los tokens `--fs-*` con `clamp()`, sin tamaños sueltos por breakpoint.
+- `.section__head--split` (Catálogo) y `.section__head--center` (Galería) varían el encabezado de sección; `.section--seam` dibuja la costura de hilo entre secciones y la banda oscura une Pedidos, Contacto y el pie.
 
 ## Desarrollo local
 

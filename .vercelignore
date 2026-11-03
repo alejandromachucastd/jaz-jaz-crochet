@@ -1,0 +1,5 @@
+# Solo se publica el sitio: los archivos de trabajo no viajan al despliegue.
+tools/
+CLAUDE.md
+README.md
+.vercel
