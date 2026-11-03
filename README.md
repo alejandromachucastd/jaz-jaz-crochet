@@ -2,6 +2,13 @@
 
 Sitio estático en español para presentar creaciones de crochet y recibir consultas. No requiere framework, instalación de paquetes ni backend.
 
+## Sitio publicado
+
+- Vista pública (GitHub Pages): https://alejandromachucastd.github.io/jaz-jaz-crochet/
+- Repositorio: https://github.com/alejandromachucastd/jaz-jaz-crochet
+
+Pages sirve el sitio desde el subdirectorio del repositorio, así que todas las rutas internas son relativas. `canonical`, `og:url`, `og:image`, `twitter:image` y el logo del JSON-LD son absolutos y deben actualizarse si el sitio pasa a un dominio propio.
+
 ## Desarrollo local
 
 Desde este directorio, inicia un servidor estático:
