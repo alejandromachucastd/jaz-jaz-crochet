@@ -1025,6 +1025,7 @@ ol {
 
 .about__media {
   position: relative;
+  width: 100%;
   max-width: 470px;
   margin-inline: auto;
 }
@@ -1048,6 +1049,7 @@ ol {
 
 .about__media img {
   width: 100%;
+  aspect-ratio: 1;
   border: 8px solid var(--paper);
   border-radius: var(--radius);
   object-fit: cover;
